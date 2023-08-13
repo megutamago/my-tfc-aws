@@ -14,8 +14,8 @@ jobs:
     if: github.repository != 'megutamago/test-api-workspace'
     name: "Terraform Clean Job"
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    permissions: read-all|write-all
+      #contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v3

@@ -1,0 +1,7 @@
+- name: Test
+  hosts: test
+  gather_facts: yes
+  user: ubuntu
+  max_fail_percentage: 0
+  tasks:
+    - import_tasks : ./test.yml
