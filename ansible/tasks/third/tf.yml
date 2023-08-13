@@ -1,0 +1,23 @@
+- name: Install the package tf
+  apt:
+    name:
+    - gnupg 
+    - software-properties-common
+
+- name: Execute tf
+  shell: wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+
+- name: Execute tf 2
+  shell: echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+- name: Update
+  apt:
+    name: "*"
+    state: latest
+    update_cache: true
+
+- name: Install the package tf 2
+  apt:
+    name:
+    - terraform
+  ignore_errors: yes

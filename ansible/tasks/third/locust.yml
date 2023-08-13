@@ -1,0 +1,9 @@
+- name: install packages
+  apt:
+    name:
+    - python3-pip
+
+- name: pip
+  pip:
+    name: locust
+    executable: pip3

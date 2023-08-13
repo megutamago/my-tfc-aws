@@ -5,4 +5,5 @@
   max_fail_percentage: 0
   become: true
   tasks:
-    - import_tasks : ./test.yml
+    - import_tasks : ./tasks/common/common.yml
+    - import_tasks : ./tasks/third/netdata.yml
