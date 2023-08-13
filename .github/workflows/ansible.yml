@@ -24,4 +24,3 @@ jobs:
             52.197.139.64
           options: |
             --inventory .hosts
-            --verbose
