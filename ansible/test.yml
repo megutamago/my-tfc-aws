@@ -1,4 +1,5 @@
 - name: Purge the package "needrestart"
+  become: true
   apt:
     name: needrestart
     state: absent
@@ -6,9 +7,9 @@
     autoremove: yes
 
 #- name: Set timezone to Asia/Tokyo
+#  become: true
 #  community.general.timezone:
 #    name: Asia/Tokyo
-#  become: true
 #
 #- name: Time sync with rsyslog
 #  systemd:
