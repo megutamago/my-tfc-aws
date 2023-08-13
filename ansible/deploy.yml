@@ -3,5 +3,6 @@
   gather_facts: yes
   user: ubuntu
   max_fail_percentage: 0
+  become: true
   tasks:
     - import_tasks : ./test.yml

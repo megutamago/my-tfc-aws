@@ -1,5 +1,4 @@
 - name: Purge the package "needrestart"
-  become: true
   apt:
     name: needrestart
     state: absent
