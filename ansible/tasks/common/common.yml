@@ -74,13 +74,3 @@
 #  with_items:
 #  - "tmpfs /tmp tmpfs defaults,noatime 0 0"
 #  - "tmpfs /var/tmp tmpfs defaults,noatime 0 0"
-
-- name: Remove "apparmor" package
-  apt:
-    name: apparmor
-    state: absent
-
-- name: remove
-  file: 
-    path: /etc/apparmor.d
-    state: absent
